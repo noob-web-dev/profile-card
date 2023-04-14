@@ -1,0 +1,168 @@
+/* ------------------------------------------------- */
+/*                                                   */
+/*                   CSS RESET                       */
+/*                                                   */
+/* ------------------------------------------------- */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:active,
+*:focus,
+*:hover {
+  outline: none;
+}
+
+body,
+main {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ----------------------------------------------- */
+
+:root {
+  /* dimension */
+  --w-min: 375px;
+  --w-max: 1440px;
+
+  --bg-w: 350px;
+  --bg-h: 140px;
+
+  /* colors */
+  --c-p-cyan: hsl(185, 75%, 39%);
+  --c-p-blue: hsl(229, 23%, 23%);
+  --c-p-gray: hsl(227, 10%, 46%);
+  --c-n-gray: hsl(0, 0%, 59%);
+
+  /* typography */
+  --f-size: 18px;
+  --f-family: "Kumbh Sans", sans-serif;
+  --f-w-reg: 400;
+  --f-w-bold: 700;
+}
+
+/* ----------------------------------------------- */
+
+body {
+  font-family: var(--f-family);
+  text-align: center;
+  text-transform: capitalize;
+  font-size: var(--f-size);
+}
+
+.profile-card {
+  width: 100vw;
+  min-height: 100vh;
+  min-width: var(--w-min);
+  display: grid;
+  place-content: center;
+  background: var(--c-p-cyan);
+  color: var(--c-p-blue);
+}
+
+.sr-only {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  color: transparent;
+}
+
+.wrapper {
+  width: var(--bg-w);
+  background: url("./images/bg-pattern-card.svg") no-repeat white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--f-size);
+  overflow: hidden;
+  padding: 25% 0 0 0;
+}
+
+.d-pic {
+  aspect-ratio: 1;
+  border: 5px solid white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+/* .d-pic > img {
+  border-radius: 300px;
+} */
+
+strong {
+  font-weight: var(--f-w-bold);
+}
+
+p,
+span,
+div {
+  font-weight: var(--f-w-reg);
+}
+
+.name-wrap {
+  margin: 1em 0;
+}
+
+.name-wrap > p + p {
+  font-size: 0.85em;
+  margin-top: 0.5em;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5em 0;
+  border-top: 1px solid var(--c-n-gray);
+}
+
+.flex-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.section span {
+  font-size: 0.75em;
+  letter-spacing: 0.15em;
+}
