@@ -96,6 +96,12 @@ body {
   display: grid;
   place-content: center;
   background: var(--c-p-cyan);
+  background-image: url("./images/bg-pattern-top.svg"),
+    url("./images/bg-pattern-bottom.svg");
+  background-position: calc(50vw - 982px) calc(50vh - 982px),
+    calc(50vw) calc(50vh);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--c-p-blue);
 }
 
@@ -126,9 +132,6 @@ body {
   overflow: hidden;
 }
 
-/* .d-pic > img {
-  border-radius: 300px;
-} */
 
 strong {
   font-weight: var(--f-w-bold);
